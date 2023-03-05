@@ -50,8 +50,8 @@ function Chat() {
 
   return (
     <div className="Chat">
-      {(messages.length === 0) ? 
-      <>
+      {(messages.length === 0 && !isSwitchOn) ? 
+      <div className="welcome">
       <header>SignGPT</header>
       <Row>
         <Col>
@@ -76,7 +76,7 @@ function Chat() {
           ))}
         </Col>
         </Row>
-        </>
+        </div>
         : <></>}
       {(messages.length > 0) ? <div className="Messages">
             {messages.map((message) => (
