@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import Message from "./Message";
 
 function Signbar() {
   const videoRef = useRef(null);
@@ -22,7 +23,8 @@ function Signbar() {
 
   return (
     <div className="Signbar">
-      {/* <video ref={videoRef} /> */}
+      <video ref={videoRef} />
+      <Message />
     </div>
   );
 }

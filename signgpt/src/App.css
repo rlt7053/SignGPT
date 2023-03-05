@@ -89,3 +89,12 @@ ul{
 .interactive video {
   width: 100%;
 }
+
+.Message {
+}
+
+.Message img {
+  width: 50px;
+  padding: 8px;
+  background-color: #2A6F96;
+}

@@ -1,7 +1,10 @@
+import SignGPTIcon from '../assets/signgpt.svg';
+
 function Message() {
   return (
     <div className="Message">
-      This is the Message!
+      <img src={SignGPTIcon} alt="SignGPT icon" />
+      <div>text</div>
     </div>
   );
 }
