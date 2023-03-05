@@ -22,7 +22,7 @@ function Signbar() {
   };
 
   return (
-    <div className="Signbar">
+    <div id="Signbar">
       <video ref={videoRef} />
       <Message messages={ false} />
     </div>

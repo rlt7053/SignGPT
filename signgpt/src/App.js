@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <Sidebar />
-      <div className="interactive">
+      <div id="interactive">
         <Chat />
         <Signbar />
       </div>

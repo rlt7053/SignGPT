@@ -66,12 +66,12 @@ ul{
   width: fit-content;
 }
 
-.interactive {
+#interactive {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
 }
 
-.interactive video {
+#interactive video {
   width: 100%;
 }
 
@@ -109,6 +109,7 @@ img {
   bottom: 0;
 }
 
-.Signbar {
+#Signbar {
+  display: none;
   margin-left: 1em;
 }

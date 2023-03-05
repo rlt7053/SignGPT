@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Row, Col, Form } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSun, faBoltLightning, faTriangleExclamation, faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 import Message from './Message';
 
 function Chat() {
-
+  const [isSwitchOn, setIsSwitchOn] = useState(false);
   const [messages, setMessages] = useState([]);
 
   const examples = [
@@ -35,6 +35,19 @@ function Chat() {
     document.getElementById("textbox").value = "";
   }
 
+  function toggleEnabled() {
+    setIsSwitchOn(!isSwitchOn);
+  }
+
+  useEffect(() => {
+    if (isSwitchOn) {
+      document.getElementById("interactive").style.gridTemplateColumns = "repeat(2, 1fr)";
+      document.getElementById("Signbar").style.display = "block"
+    } else {
+      document.getElementById("interactive").style.gridTemplateColumns = "";
+      document.getElementById("Signbar").style.display = "" 
+    } }, [isSwitchOn]);
+
   return (
     <div className="Chat">
       {(messages.length === 0) ? 
@@ -44,22 +57,22 @@ function Chat() {
         <Col>
           <FontAwesomeIcon icon={faSun} />
           <Row>Examples</Row>
-          {examples.map((example) => (
-            <Row>{example}</Row>
+          {examples.map((example, index) => (
+            <Row key={index}>{example}</Row>
           ))}
         </Col>
         <Col>
           <FontAwesomeIcon icon={faBoltLightning} />
           <Row>Capabilities</Row>
-          {capabilities.map((capabiliity) => (
-            <Row>{capabiliity}</Row>
+          {capabilities.map((capabiliity, index) => (
+            <Row key={index}>{capabiliity}</Row>
           ))}
         </Col>
         <Col>
           <FontAwesomeIcon icon={faTriangleExclamation} />
           <Row>Limitations</Row>
-          {limitations.map((limitation) => (
-            <Row>{limitation}</Row>
+          {limitations.map((limitation, index) => (
+            <Row key={index}>{limitation}</Row>
           ))}
         </Col>
         </Row>
@@ -75,11 +88,12 @@ function Chat() {
             type="switch"
             id="custom-switch"
             label="Practice"
+            onChange={toggleEnabled}
           />
         </Row>
         <Row>
           <div id="message">
-            <Form.Control as="textarea" id="textbox" rows={1} />
+            <Form.Control as="textarea" id="textbox" rows={1}/>
             <FontAwesomeIcon id="paperPlane" icon={faPaperPlane}  onClick={send}/>
           </div>
           <Form.Text>SignGPT March 5 Version. Free Research Preview. Our goal is to make AI systems more natural and safe to interact with. Your feedback will help us improve.</Form.Text>
