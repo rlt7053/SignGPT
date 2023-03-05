@@ -10,8 +10,10 @@ function App() {
     <div className="App">
 
       <Sidebar />
-      <Chat />
-      <Signbar />
+      <div className="interactive">
+        <Chat />
+        <Signbar />
+      </div>
     </div>
   );
 }

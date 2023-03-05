@@ -1,6 +1,6 @@
 import Nav from "react-bootstrap/Nav";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { faCoffee, faPlus } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -17,9 +17,11 @@ function Sidebar() {
 
 
       <button class="button newBtn">
-      <FontAwesomeIcon icon={(faCoffee)} />
+      <FontAwesomeIcon icon={(faPlus)} />
         New Chat</button>
       <ul>
+
+      <i class="fa-solid fa-plus"></i>
         <li><Nav.Link href="/home">SignGPT</Nav.Link></li>
         <li><Nav.Link eventKey="link-1">Upgrade to PLUS</Nav.Link></li>
         <li> <Nav.Link eventKey="link-2">Dark Mode</Nav.Link></li>

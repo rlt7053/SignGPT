@@ -1,4 +1,4 @@
-.App {
+.Chat {
   text-align: center;
 }
 
@@ -65,3 +65,27 @@ ul{
 
 }
 
+.Chat .row {
+  justify-content: center;
+  width: 100%;
+}
+
+#message {
+  position: relative;
+}
+
+#paperPlane {
+  position: absolute;
+  right: 25px;
+  bottom: 10px;
+  width: fit-content;
+}
+
+.interactive {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.interactive video {
+  width: 100%;
+}
