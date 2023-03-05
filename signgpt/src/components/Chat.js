@@ -58,21 +58,21 @@ function Chat() {
           <FontAwesomeIcon icon={faSun} />
           <Row>Examples</Row>
           {examples.map((example, index) => (
-            <Row key={index}>{example}</Row>
+            <Row className="details" key={index}>{example}</Row>
           ))}
         </Col>
         <Col>
           <FontAwesomeIcon icon={faBoltLightning} />
           <Row>Capabilities</Row>
           {capabilities.map((capabiliity, index) => (
-            <Row key={index}>{capabiliity}</Row>
+            <Row className="details" key={index}>{capabiliity}</Row>
           ))}
         </Col>
         <Col>
           <FontAwesomeIcon icon={faTriangleExclamation} />
           <Row>Limitations</Row>
           {limitations.map((limitation, index) => (
-            <Row key={index}>{limitation}</Row>
+            <Row className="details" key={index}>{limitation}</Row>
           ))}
         </Col>
         </Row>
