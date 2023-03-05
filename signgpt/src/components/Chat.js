@@ -78,9 +78,10 @@ function Chat() {
         </Row>
         </>
         : <></>}
-      {messages.map((message) => (
+      {(messages.length > 0) ? <div className="Messages">
+            {messages.map((message) => (
         <Message  messages={ true} >{message}</Message>
-      ))}
+      ))}</div>: <></>}
       <Row id="chatbar">
         <Row id="filterToggle">
           <Form.Check

@@ -2,7 +2,7 @@ import SignGPTIcon from '../assets/signgpt.svg';
 
 function Message(props) {
   return (
-    <div class="Messages">
+    <div>
         {(props.messages) ?
         <> <div className="Message" style={{backgroundColor: 'white'}}>
         <div>
