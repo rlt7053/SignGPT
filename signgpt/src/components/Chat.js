@@ -82,7 +82,7 @@ function Chat() {
         <Message  messages={ true} >{message}</Message>
       ))}
       <Row id="chatbar">
-        <Row>
+        <Row id="filterToggle">
           <Form.Check
             reverse
             type="switch"

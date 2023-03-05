@@ -72,6 +72,11 @@ ul {
   margin: 0;
 }
 
+.Messages {
+  height: 70vh;
+  overflow: auto;
+}
+
 #message {
   position: relative;
 }
@@ -107,21 +112,32 @@ img {
   background-color: #2a6f96;
 }
 
-.image {
-  flex-basis: 40%;
+.icon {
+  background-color: #2a6f96;
+  color: white;
+  padding: .6em 1.3em;
 }
 
 .text {
   text-align: left;
   width: 100%;
+  height: 100%;
   font-size: 15px;
   padding-left: 20px;
   padding-right: 20px;
 }
 
+.text p {
+  margin: 0;
+}
+
 #chatbar {
   position: absolute;
   bottom: 0;
+}
+
+#filterToggle {
+  padding: 0em 1.4em;
 }
 
 #Signbar {

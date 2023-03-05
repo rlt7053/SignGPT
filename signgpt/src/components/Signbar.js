@@ -41,9 +41,9 @@ function Signbar() {
         ></video>
         <div className="app__input">
           {playing ? (
-            <button id="start" onClick={stopVideo}></button>
+            <button id="stop" onClick={stopVideo}></button>
           ) : (
-            <button id="stop" onClick={startVideo}></button>
+            <button id="start" onClick={startVideo}></button>
           )}
         </div>
       </div>

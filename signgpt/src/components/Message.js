@@ -5,7 +5,7 @@ function Message(props) {
     <div class="Messages">
         {(props.messages) ?
         <> <div className="Message" style={{backgroundColor: 'white'}}>
- <div>
+        <div>
           <div className="icon">L</div>
         </div>
 
@@ -21,7 +21,7 @@ function Message(props) {
           <video autoPlay controls>
           <source src="../assets/aslsample.mp4" type="video/mp4"/>
             Your browser does not support the video tag.
-            </video><p>Here's the link to the video above: <a href="https://lifeprint.com/asl101/pages-signs/f/fish.htm">https://lifeprint.com/asl101/pages-signs/f/fish.htm</a></p></div></div></> : <>
+            </video><p>Here's the link to the video above: <a href="https://lifeprint.com/asl101/pages-signs/f/fish.htm">https://lifeprint.com/asl101/pages-signs/f/fish.htm</a>.</p></div></div></> : <>
           <div className="Message">
         <div>
           <img src={SignGPTIcon} alt="SignGPT icon" />
