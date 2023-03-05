@@ -1,5 +1,4 @@
 import React, { useRef, useState } from "react";
-import Webcam from "react-webcam";
 import Message from "./Message";
 
 function Signbar() {
@@ -31,12 +30,7 @@ function Signbar() {
   };
 
   return (
-<<<<<<< HEAD
     <div id="Signbar">
-      <video ref={videoRef} />
-      <Message messages={ false} />
-=======
-    <div className="app">
       <div className="app__container">
         <video
           height={HEIGHT}
@@ -55,7 +49,6 @@ function Signbar() {
       </div>
 
       <Message messages={false} />
->>>>>>> b3b625fb8f7afb5f02d6cadcce3e6adb9b51a8af
     </div>
   );
 }
