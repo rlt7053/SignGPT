@@ -2,9 +2,13 @@
   text-align: center;
 }
 
-html,
-body {
-  height: 100%;
+html, body, #root, #root>div {
+  height: 100%
+}
+
+.App {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
 }
 
 .button {
@@ -18,10 +22,6 @@ body {
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
-
-  
-  
-  
 }
 
 .newBtn {
@@ -29,45 +29,31 @@ body {
   color: white;
   border: 1px solid white;
   border-radius: 10px;
-  width: 300px;
-  
-
+  width: 190px;
 }
-/* 
-.default {
-  border-color: #e7e7e7;
-  color: black;
-}
-
-.default:hover {
-  background: #e7e7e7;
-} */
 
 .fixed-sidebar {
-  padding: 10px;
-  min-width: 300px;
-  position: absolute;
+  /* padding: 10px;
+  min-width: 300px; */
+  position: relative;
   background-color: #282c34;
   height: 100%;
-  /* bottom: 0; */
 }
 
 ul{
   list-style-type: none;
   text-align: left;
-  width: 300px;
   margin: 0;
   padding: 0;
-  height: fit-content;  
   position: absolute;
+  height: fit-content;
   bottom: 0;
-  
-
 }
 
 .Chat .row {
   justify-content: center;
   width: 100%;
+  margin: 0;
 }
 
 #message {
