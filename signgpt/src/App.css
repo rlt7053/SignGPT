@@ -1,5 +1,6 @@
 .Chat {
   text-align: center;
+  position: relative;
 }
 .Chat header {
   font-size: 30px;
@@ -39,28 +40,20 @@ body,
 }
 
 .fixed-sidebar {
-  /* padding: 10px;
-  min-width: 300px; */
   position: relative;
   background-color: #282c34;
   height: 100%;
-  
-
 }
 
 #signgpt-side-icon {
   background: none;
   width: 40px;
-
 }
 
 .icon-sidebar {
   /* width: 1px; */
   color: white;
-
 }
-
-
 
 ul {
   list-style-type: none;
@@ -97,6 +90,7 @@ ul {
 
 .interactive video {
   width: 100%;
+  height: 100%;
 }
 
 .Message {
@@ -118,7 +112,49 @@ img {
 }
 
 .text {
+  text-align: left;
+  width: 100%;
   font-size: 15px;
   padding-left: 20px;
   padding-right: 20px;
+}
+
+#chatbar {
+  position: absolute;
+  bottom: 0;
+}
+
+.Signbar {
+  margin-left: 1em;
+}
+
+.app__container {
+  position: relative;
+}
+
+.app__input {
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  right: 50%;
+  bottom: 40px;
+  border: 2px solid white;
+  transform: translate(50%, 50%);
+  border-radius: 50%;
+}
+
+.app__input button {
+  background-color: red;
+  width: 50px;
+  height: 50px;
+  border: none;
+}
+
+#start {
+  border-radius: 50%;
+}
+#stop {
+  width: 22px;
+  height: 22px;
+  transform: translate(65%, 65%);
 }
