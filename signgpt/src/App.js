@@ -1,7 +1,7 @@
-import './App.css';
-import Chat from './components/Chat';
-import Sidebar from './components/Sidebar';
-import Signbar from './components/SignBar';
+import "./App.css";
+import Chat from "./components/Chat";
+import Sidebar from "./components/Sidebar";
+import Signbar from "./components/Signbar";
 
 function App() {
   return (
