@@ -1,9 +1,15 @@
 .Chat {
   text-align: center;
 }
+.Chat header {
+  font-size: 30px;
+}
 
-html, body, #root, #root>div {
-  height: 100%
+html,
+body,
+#root,
+#root > div {
+  height: 100%;
 }
 
 .App {
@@ -16,7 +22,7 @@ html, body, #root, #root>div {
   border: none;
   color: white;
   padding: 15px 32px;
-  text-align: center;
+  text-align: left;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
@@ -38,9 +44,25 @@ html, body, #root, #root>div {
   position: relative;
   background-color: #282c34;
   height: 100%;
+  
+
 }
 
-ul{
+#signgpt-side-icon {
+  background: none;
+  width: 40px;
+
+}
+
+.icon-sidebar {
+  /* width: 1px; */
+  color: white;
+
+}
+
+
+
+ul {
   list-style-type: none;
   text-align: left;
   margin: 0;
@@ -48,6 +70,7 @@ ul{
   position: absolute;
   height: fit-content;
   bottom: 0;
+  color: white;
 }
 
 .Chat .row {
@@ -84,17 +107,14 @@ ul{
   padding: 20px;
 }
 
-
-
-
 img {
   width: 50px;
   padding: 8px;
-  background-color: #2A6F96;
+  background-color: #2a6f96;
 }
 
 .image {
-  flex-basis: 40%
+  flex-basis: 40%;
 }
 
 .text {
