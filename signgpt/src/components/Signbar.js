@@ -23,8 +23,8 @@ function Signbar() {
 
   return (
     <div className="Signbar">
-      {/* <video ref={videoRef} /> */}
-      <Message />
+      <video ref={videoRef} />
+      <Message messages={ false} />
     </div>
   );
 }

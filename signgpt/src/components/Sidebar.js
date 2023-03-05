@@ -1,21 +1,11 @@
 import Nav from "react-bootstrap/Nav";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee, faPlus } from '@fortawesome/free-solid-svg-icons';
-
-
-
-
-
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
 function Sidebar() {
   return (
-
-
     <Nav defaultActiveKey="/home" className="flex end">
       <div class = "fixed-sidebar">
-
-
-
       <button class="button newBtn">
       <FontAwesomeIcon icon={(faPlus)} />
         New Chat</button>
@@ -29,11 +19,8 @@ function Sidebar() {
         <li><Nav.Link eventKey="link-4">Log Out</Nav.Link></li>
 
       </ul>
-
     </div>
-
     </Nav>
-
   );
 }
 

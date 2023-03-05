@@ -1,5 +1,6 @@
 .Chat {
   text-align: center;
+  position: relative;
 }
 
 html, body, #root, #root>div {
@@ -33,8 +34,6 @@ html, body, #root, #root>div {
 }
 
 .fixed-sidebar {
-  /* padding: 10px;
-  min-width: 300px; */
   position: relative;
   background-color: #282c34;
   height: 100%;
@@ -84,21 +83,32 @@ ul{
   padding: 20px;
 }
 
-
-
-
 img {
   width: 50px;
   padding: 8px;
   background-color: #2A6F96;
 }
 
-.image {
-  flex-basis: 40%
+.icon {
+  color: white;
+  background-color: #2A6F96;
+  text-align: center;
+  padding: 0.7em 1.3em;
 }
 
 .text {
+  text-align: left;
+  width: 100%;
   font-size: 15px;
   padding-left: 20px;
   padding-right: 20px;
+}
+
+#chatbar {
+  position: absolute;
+  bottom: 0;
+}
+
+.Signbar {
+  margin-left: 1em;
 }

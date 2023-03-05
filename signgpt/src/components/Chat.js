@@ -1,8 +1,13 @@
+import React, { useState } from 'react';
 import { Row, Col, Form } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSun, faBoltLightning, faTriangleExclamation, faPaperPlane } from '@fortawesome/free-solid-svg-icons'
+import Message from './Message';
 
 function Chat() {
+
+  const [messages, setMessages] = useState([]);
+
   const examples = [
     "What is the sign for fish?",
     "What are some resources for learning sign language?",
@@ -18,8 +23,22 @@ function Chat() {
     "Only supports ASL"
   ];
 
+  function send(e) {
+    e.preventDefault();
+    const text = document.getElementById("textbox").value;
+    if (text !== "") {
+      setMessages([
+        ...messages,
+        { message: text}
+      ])
+    }
+    document.getElementById("textbox").value = "";
+  }
+
   return (
     <div className="Chat">
+      {(messages.length === 0) ? 
+      <>
       <header>SignGPT</header>
       <Row>
         <Col>
@@ -43,8 +62,13 @@ function Chat() {
             <Row>{limitation}</Row>
           ))}
         </Col>
-      </Row>
-      <Row>
+        </Row>
+        </>
+        : <></>}
+      {messages.map((message) => (
+        <Message  messages={ true} >{message}</Message>
+      ))}
+      <Row id="chatbar">
         <Row>
           <Form.Check
             reverse
@@ -53,9 +77,12 @@ function Chat() {
             label="Practice"
           />
         </Row>
-        <Row id="message">
-          <Form.Control as="textarea" rows={1} />
-          <FontAwesomeIcon id="paperPlane" icon={faPaperPlane} />
+        <Row>
+          <div id="message">
+            <Form.Control as="textarea" id="textbox" rows={1} />
+            <FontAwesomeIcon id="paperPlane" icon={faPaperPlane}  onClick={send}/>
+          </div>
+          <Form.Text>SignGPT March 5 Version. Free Research Preview. Our goal is to make AI systems more natural and safe to interact with. Your feedback will help us improve.</Form.Text>
         </Row>
       </Row>
     </div>
